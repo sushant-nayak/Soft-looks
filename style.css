@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: rgba(173, 33, 33, .2);
+  --secondary-color: rgba(129, 129, 237, 0.9);
+}
+
+html,
+body {
+  font-family: "Roboto Slab", serif;
+  background: var(--primary-color);
+}
+
+.container {
+  border: 2px solid #cbdcbd;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  /*     align-items: center; */
+  
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+div.wrapper {
+/*   border: 1px solid; */
+  postion: relative;
+  width: 205px;
+  height: 205px;
+  margin: 20px auto;
+  border-radius: 20px;
+  background: var(--secondary-color);
+  
+  -webkit-box-shadow: -5px -5px 10px 0 #fff, 
+                      5px 5px 10px 0 var(--secondary-color);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    -5px -5px 10px 0 #fff, 
+                      5px 5px 10px 0 var(--secondary-color);  /* Firefox 3.5 - 3.6 */
+  box-shadow:         -5px -5px 10px 0 rgba(225, 225, 225, 0.8), 
+                      5px 5px 10px 2px var(--secondary-color);
+/*     #444857;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */ */
+}
+
+h1,
+h2,
+h3 {
+  padding: 8px;
+  /* Perfect centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper > h3 {
+  height: 100%;
+}
+
+h3:hover {
+  animation: roll 2s infinite;
+  animation-direction: alternate;
+}
+
+/**
+* Skew Animation
+*/
+@keyframes totallyskew {
+  0% {
+    transform: skew(20deg, 20deg);
+  }
+  100% {
+    transform: skew(-20deg, -20deg);
+  }
+}
+
+/**
+* Roll Animations
+*
+*/
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
