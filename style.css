@@ -14,12 +14,9 @@
 html,
 body {
   font-family: "Roboto Slab", serif;
-  background: var(--primary-color);
+  /* background: var(--primary-color); */
 }
 
-.container {
-  border: 2px solid #cbdcbd;
-}
 .title {
   display: flex;
   justify-content: center;
@@ -31,7 +28,7 @@ body {
 
 div.wrapper {
 /*   border: 1px solid; */
-  postion: relative;
+  position: relative;
   width: 205px;
   height: 205px;
   margin: 20px auto;
@@ -89,4 +86,11 @@ h3:hover {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.container img{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: -1;
 }
